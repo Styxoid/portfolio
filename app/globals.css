@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #08090c;
+  --color-emerald: #0f231c;
+  --color-gold: #d4af37;
+  --color-silver: #f1f5f9;
+  --font-display: "Cinzel", "Playfair Display", "Times New Roman", serif;
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", "SF Mono", monospace;
+}
+
+:root {
+  --font-display: "Cinzel", "Playfair Display", "Times New Roman", serif;
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", "SF Mono", monospace;
+  background-color: #08090c;
+  color: #f1f5f9;
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #08090c;
+  color: #f1f5f9;
+  overflow-x: hidden;
+  font-family: var(--font-sans);
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #08090c;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #d4af37;
+}
+
+/* Luxury card styling utilities */
+.card-face {
+  background: radial-gradient(circle at 50% 30%, #161b24 0%, #090b10 100%);
+  box-shadow: 0 15px 35px -5px rgba(0, 0, 0, 0.7), 0 0 20px -2px rgba(212, 175, 55, 0.25);
+}
+
+.card-back {
+  background: radial-gradient(circle at center, #14382a 0%, #06120d 100%);
+  box-shadow: 0 15px 35px -5px rgba(0, 0, 0, 0.8), 0 0 25px -2px rgba(212, 175, 55, 0.35);
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.2rem 0.6rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(212, 175, 55, 0.5);
+  background-color: rgba(15, 35, 28, 0.85);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: #f3d98a;
+}
